@@ -1,6 +1,6 @@
-var loadAddress = 'http://bgx.lingser.cn/getworkerprojectlist?token=' + customSession.data.token;
-var modalAuditFormAddress = 'http://bgx.lingser.cn/changeworkerproject?token=' + customSession.data.token;
-var modalDetailFormAddress = 'http://bgx.lingser.cn/getworkerprojectdetail?token=' + customSession.data.token;
+var loadAddress = 'https://bgx.lingser.cn/getworkerprojectlist?token=' + customSession.data.token;
+var modalAuditFormAddress = 'https://bgx.lingser.cn/changeworkerproject?token=' + customSession.data.token;
+var modalDetailFormAddress = 'https://bgx.lingser.cn/getworkerprojectdetail?token=' + customSession.data.token;
 
 // 加载
 $(function () {

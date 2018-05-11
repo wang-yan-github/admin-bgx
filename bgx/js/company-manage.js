@@ -1,5 +1,5 @@
-var loadAddress = 'http://bgx.lingser.cn/getinvitecodelist?token=' + customSession.data.token;
-var addAddress = 'http://bgx.lingser.cn/addinvitecode?token=' + customSession.data.token;
+var loadAddress = 'https://bgx.lingser.cn/getinvitecodelist?token=' + customSession.data.token;
+var addAddress = 'https://bgx.lingser.cn/addinvitecode?token=' + customSession.data.token;
 
 // 加载
 $(function () {

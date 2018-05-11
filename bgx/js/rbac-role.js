@@ -1,9 +1,9 @@
-var loadAddress = 'http://bgx.lingser.cn/addminrolelist?token=' + customSession.data.token;
-var modalAddFormAddress = 'http://bgx.lingser.cn/addrole?token=' + customSession.data.token;
-var modalEditFormAddress = 'http://bgx.lingser.cn/editrole?token=' + customSession.data.token;
-var deleteAddress = 'http://bgx.lingser.cn/deleterole?token=' + customSession.data.token;
-var modalGetRoleFormAddress = 'http://bgx.lingser.cn/getrolecate?token=' + customSession.data.token;
-var modalUpdateRoleFormAddress = 'http://bgx.lingser.cn/roleauthmanager?token=' + customSession.data.token;
+var loadAddress = 'https://bgx.lingser.cn/addminrolelist?token=' + customSession.data.token;
+var modalAddFormAddress = 'https://bgx.lingser.cn/addrole?token=' + customSession.data.token;
+var modalEditFormAddress = 'https://bgx.lingser.cn/editrole?token=' + customSession.data.token;
+var deleteAddress = 'https://bgx.lingser.cn/deleterole?token=' + customSession.data.token;
+var modalGetRoleFormAddress = 'https://bgx.lingser.cn/getrolecate?token=' + customSession.data.token;
+var modalUpdateRoleFormAddress = 'https://bgx.lingser.cn/roleauthmanager?token=' + customSession.data.token;
 
 // 加载
 $(function () {

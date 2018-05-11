@@ -1,6 +1,6 @@
-var loadAddress = 'http://bgx.lingser.cn/getbgxctlist?token=' + customSession.data.token;
-var modalAuditFormAddress = 'http://bgx.lingser.cn/atbgxctract?token=' + customSession.data.token;
-var modalDetailFormAddress = 'http://bgx.lingser.cn/bgxctdetail?token=' + customSession.data.token;
+var loadAddress = 'https://bgx.lingser.cn/getbgxctlist?token=' + customSession.data.token;
+var modalAuditFormAddress = 'https://bgx.lingser.cn/atbgxctract?token=' + customSession.data.token;
+var modalDetailFormAddress = 'https://bgx.lingser.cn/bgxctdetail?token=' + customSession.data.token;
 
 // 加载
 $(function () {
