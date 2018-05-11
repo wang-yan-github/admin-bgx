@@ -85,7 +85,7 @@ $(function () {
                 valign: 'middle',
                 formatter: function (value, row, index) {
                     var res = '<button class="btn btn-outline btn-primary btn-xs" onclick="getDetail(\'' + row.la_id + '\')">详情</button>';
-                    if(row.p_status == 311){
+                    if(row.la_opt_status == 311){
                         res += '&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline btn-success btn-xs" onclick="getAudit(\'' + row.la_id + '\')">项目完工</button>';
                     }
 
