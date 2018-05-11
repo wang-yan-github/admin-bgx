@@ -51,6 +51,18 @@
 <script src="js/plugins/toastr/toastr.min.js"></script>
 
 <script>
+    // 回车登陆
+    $(".m-t").bind("keydown",function(e){
+        // 兼容FF和IE和Opera
+        var theEvent = e || window.event;
+        var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if (code == 13) {
+            //回车执行查询
+            $(".m-b").click();
+        }
+
+    });
+
     function ck(){
         var account = $('#account').val();
         var password = $('#password').val();
