@@ -1,7 +1,7 @@
-var loadAddress = 'http://bgx.lingser.cn/getdatadictlist?token=' + customSession.data.token;
-var modalAddFormAddress = 'http://bgx.lingser.cn/adddatadict?token=' + customSession.data.token;
-var modalEditFormAddress = 'http://bgx.lingser.cn/editdatadict?token=' + customSession.data.token;
-var deleteAddress = 'http://bgx.lingser.cn/deletedatadict?token=' + customSession.data.token;
+var loadAddress = 'https://bgx.lingser.cn/getdatadictlist?token=' + customSession.data.token;
+var modalAddFormAddress = 'https://bgx.lingser.cn/adddatadict?token=' + customSession.data.token;
+var modalEditFormAddress = 'https://bgx.lingser.cn/editdatadict?token=' + customSession.data.token;
+var deleteAddress = 'https://bgx.lingser.cn/deletedatadict?token=' + customSession.data.token;
 
 // 加载
 $(function () {
