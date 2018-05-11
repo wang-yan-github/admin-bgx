@@ -1,4 +1,4 @@
-var loadAddress = 'httpss://bgx.lingser.cn/getadverlist?token=' + customSession.data.token;
+var loadAddress = 'https://bgx.lingser.cn/getadverlist?token=' + customSession.data.token;
 var modalAddFormAddress = 'https://bgx.lingser.cn/addadver?token=' + customSession.data.token;
 var modalEditFormAddress = 'https://bgx.lingser.cn/editadver?token=' + customSession.data.token;
 var deleteAddress = 'https://bgx.lingser.cn/deleteadver?token=' + customSession.data.token;
