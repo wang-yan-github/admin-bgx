@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>后台管理中心</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--bootstrap-table 表单-->
+    <link rel="stylesheet" href="css/plugins/bootstrap-table/bootstrap-table.css">
+    <!--fileinput 文件上传-->
+    <link href="css/plugins/bootstrap-fileinput/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <!-- 时间插件 -->
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <!--sweetalert 确认弹出框-->
+    <link rel="stylesheet" href="css/plugins/sweetalert/sweetalert.css">
+    <!--Toastr 提示信息-->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <!--iCheck 选择框-->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+
+</head>
+
+<body class="">
+
+<div id="wrapper">
+
+    <div id="custom-menu">
+        <custom-menu one="系统权限管理" two="用户信息管理" type="active"></custom-menu>
+    </div>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div id="custom-head">
+            <custom-head></custom-head>
+        </div>
+        <div id="custom-bootstrap">
+            <custom-bootstrap one="首页" two="用户信息管理"></custom-bootstrap>
+        </div>
+
+        <div class="wrapper wrapper-content">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>用户信息管理</h5>
+                        </div>
+
+                        <div class="ibox-content">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">登录帐号</label>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="account">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">用户名字</label>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="username">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 text-right">
+                                    <input type="button" class="btn btn-default" value="查  询" id="searchInfo">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="button" class="btn btn-default" value="重  置" id="reset">
+                                </div>
+                            </div>
+
+                            <div class="hr-line-dashed"></div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="button" id="add" name="add" class="btn btn-primary add" value="新增">
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+
+                                <table class="table" id="table">
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div id="modal-add-form" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">新增</h4>
+            </div>
+            <div class="modal-body">
+
+                <form id="formSave" method="post" onsubmit="return false">
+                    <div class="form-group">
+                        <label class="control-label">登录账号</label>
+                        <input type="type" class="form-control" name="account"
+                               placeholder="请输入登录账号...">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户密码</label>
+                        <input type="password" class="form-control" name="password"
+                               placeholder="请输入用户密码...">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户姓名</label>
+                        <input type="type" class="form-control" name="username"
+                               placeholder="请输入用户姓名...">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户性别</label>
+                        <div class="i-checks"><label> <input type="radio" checked="" value="1" name="sex"> <i></i> 男 </label>
+                            <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="2" name="sex"> <i></i> 女 </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户生日</label>
+                        <span class="input-group date date-picker margin-bottom-10">
+                            <span class="input-group-btn" style="width: 25%;">
+                                <button type="button" class="btn btn-sm default"><i class="fa fa-calendar"></i></button>
+                            </span>
+                            <input type="text" readonly="readonly" name="birthday" placeholder="生日" class="form-control form-filter input-sm">
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户电话</label>
+                        <input type="type" class="form-control" name="telephone"
+                               placeholder="请输入用户电话...">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户住址</label>
+                        <input type="type" class="form-control" name="address"
+                               placeholder="请输入用户住址...">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户邮箱</label>
+                        <input type="type" class="form-control" name="mail"
+                               placeholder="请输入用户邮箱...">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">备注</label>
+                        <textarea rows="3" class="form-control" name="remark"></textarea>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-primary"
+                                name="modal-add-form">提交
+                        </button>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">关闭
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="modal-edit-form" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">修改</h4>
+            </div>
+            <div class="modal-body">
+
+                <form id="formEdit" method="post" onsubmit="return false">
+                    <input type="hidden" name="uid">
+                    <div class="form-group">
+                        <label class="control-label">用户姓名</label>
+                        <input type="type" class="form-control" name="username"
+                               placeholder="请输入用户姓名...">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户性别</label>
+                        <div class="i-checks"><label> <input type="radio" value="1" name="sex"> <i></i> 男 </label>
+                            <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="2" name="sex"> <i></i> 女 </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户生日</label>
+                        <span class="input-group date date-picker margin-bottom-10">
+                            <span class="input-group-btn" style="width: 25%;">
+                                <button type="button" class="btn btn-sm default"><i class="fa fa-calendar"></i></button>
+                            </span>
+                            <input type="text" readonly="readonly" name="birthday" placeholder="生日" class="form-control form-filter input-sm">
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户电话</label>
+                        <input type="type" class="form-control" name="telephone"
+                               placeholder="请输入用户电话...">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户住址</label>
+                        <input type="type" class="form-control" name="address"
+                               placeholder="请输入用户住址...">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户邮箱</label>
+                        <input type="type" class="form-control" name="mail"
+                               placeholder="请输入用户邮箱...">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">备注</label>
+                        <textarea rows="3" class="form-control" name="remark"></textarea>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-primary"
+                                name="modal-edit-form">保存
+                        </button>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">关闭
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="modal-role-form" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">修改</h4>
+            </div>
+            <div class="modal-body">
+
+                <form id="formRole" method="post" onsubmit="return false">
+                    <input type="hidden" name="uid">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label class="control-label">角色关联</label>
+                            <select class="form-control" name="r_id"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">登陆账号</label>
+                        <input type="type" class="form-control" name="account"
+                               disabled="disabled">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户姓名</label>
+                        <input type="type" class="form-control" name="username"
+                               disabled="disabled">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户电话</label>
+                        <input type="type" class="form-control" name="telephone"
+                               disabled="disabled">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">用户邮箱</label>
+                        <input type="type" class="form-control" name="mail"
+                               disabled="disabled">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-primary"
+                                name="modal-role-form">保存
+                        </button>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">关闭
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!--bootstrap-table 表单-->
+<script src="js/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="js/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<!--fileinput 文件上传-->
+<script src="js/plugins/bootstrap-fileinput/fileinput.js"></script>
+<script src="js/plugins/bootstrap-fileinput/fileinput_locale_zh.js"></script>
+<!--sweetalert 确认弹出框-->
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<!-- 时间插件 -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!--Toastr 提示信息-->
+<script src="js/plugins/toastr/toastr.min.js/"></script>
+<!--iCheck 选择框-->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<!--vue.js 公共组件-->
+<script src="js/plugins/vuejs/vue.js"></script>
+<!-- 函数库 -->
+<script src="js/plugins/underscore/underscore.js"></script>
+
+<!--app.js | plug-in-->
+<script src="app.js"></script>
+<script src="plug-in.js"></script>
+
+<script src="bgx/js/rbac-user.js"></script>
+
+<script>
+    $('.date-picker').datepicker({
+        format: 'yyyy-mm-dd',
+        todayBtn: "linked",
+        keyboardNavigation: false,
+        forceParse: false,
+        calendarWeeks: true,
+        autoclose: true,
+        endDate:new Date(),
+    });
+</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,101 @@
+{
+  "text": "系统权限管理",
+  "state": {
+    "disabled": false
+  },
+  "url": "",
+  "sub": [{
+    "text": "菜单信息管理",
+    "url": "Permismanager\/rolemenuList",
+    "state": {
+      "disabled": false
+    },
+    "sub": [{
+      "text": "下级菜单",
+      "url": "Permismanager\/addMenu",
+      "state": {
+        "disabled": false
+      }
+    }, {
+      "text": "修改菜单",
+      "url": "Permismanager\/editMenu",
+      "state": {
+        "disabled": false
+      }
+    }, {
+      "text": "删除菜单",
+      "url": "Permismanager\/deleteMenu",
+      "state": {
+        "disabled": false
+      }
+    }]
+  }, {
+    "text": "角色信息管理",
+    "url": "Permismanager\/roleList",
+    "state": {
+      "disabled": false
+    },
+    "sub": [{
+      "text": "新增",
+      "url": "Permismanager\/addRole",
+      "state": {
+        "disabled": false
+      }
+    }, {
+      "text": "修改",
+      "url": "Permismanager\/editRole",
+      "state": {
+        "disabled": false
+      }
+    }, {
+      "text": "删除",
+      "url": "Permismanager\/deleteRole",
+      "state": {
+        "disabled": false
+      }
+    }, {
+      "text": "关系维护",
+      "url": "Permismanager\/rolecatelist,Permismanager\/roleauthManager",
+      "state": {
+        "disabled": true
+      }
+    }]
+  }, {
+    "text": "用户信息管理",
+    "url": "Permismanager\/getUserlist",
+    "state": {
+      "disabled": false
+    },
+    "sub": [{
+      "text": "新增",
+      "url": "Permismanager\/addUser",
+      "state": {
+        "disabled": false
+      }
+    }, {
+      "text": "修改",
+      "url": "Permismanager\/editUser",
+      "state": {
+        "disabled": false
+      }
+    }, {
+      "text": "禁用\/启用",
+      "url": "Permismanager\/changeuser",
+      "state": {
+        "disabled": false
+      }
+    }, {
+      "text": "重置密码",
+      "url": "Permismanager\/resetuser",
+      "state": {
+        "disabled": false
+      }
+    }, {
+      "text": "角色管理",
+      "url": "Permismanager\/roleUser",
+      "state": {
+        "disabled": false
+      }
+    }]
+  }]
+}

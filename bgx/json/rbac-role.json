@@ -1,0 +1,126 @@
+{
+  "data": [
+    {
+      "text": "系统权限管理",
+      "state": {
+        "selected": false
+      },
+      "id": "",
+      "children": [
+        {
+          "text": "菜单信息管理",
+          "id": "Permismanager\/rolemenuList",
+          "state": {
+            "selected": true
+          },
+          "children": [
+            {
+              "text": "下级菜单",
+              "id": "Permismanager\/addMenu",
+              "state": {
+                "selected": false
+              }
+            },
+            {
+              "text": "修改菜单",
+              "id": "Permismanager\/editMenu",
+              "state": {
+                "selected": false
+              }
+            },
+            {
+              "text": "删除菜单",
+              "id": "Permismanager\/deleteMenu",
+              "state": {
+                "selected": false
+              }
+            }
+          ]
+        },
+        {
+          "text": "角色信息管理",
+          "id": "Permismanager\/roleList",
+          "state": {
+            "selected": false
+          },
+          "children": [
+            {
+              "text": "新增",
+              "id": "Permismanager\/addRole",
+              "state": {
+                "selected": false
+              }
+            },
+            {
+              "text": "修改",
+              "id": "Permismanager\/editRole",
+              "state": {
+                "selected": false
+              }
+            },
+            {
+              "text": "删除",
+              "id": "Permismanager\/deleteRole",
+              "state": {
+                "selected": false
+              }
+            },
+            {
+              "text": "角色关系维护",
+              "id": "Permismanager\/rolecatelist,Permismanager\/roleauthManager",
+              "state": {
+                "selected": false
+              }
+            }
+          ]
+        },
+        {
+          "text": "用户信息管理",
+          "id": "Permismanager\/getUserlist",
+          "state": {
+            "selected": false
+          },
+          "children": [
+            {
+              "text": "新增",
+              "id": "Permismanager\/addUser",
+              "state": {
+                "selected": false
+              }
+            },
+            {
+              "text": "修改",
+              "id": "Permismanager\/editUser",
+              "state": {
+                "selected": false
+              }
+            },
+            {
+              "text": "禁用\/启用",
+              "id": "Permismanager\/changeuser",
+              "state": {
+                "selected": false
+              }
+            },
+            {
+              "text": "重置密码",
+              "id": "Permismanager\/resetuser",
+              "state": {
+                "selected": false
+              }
+            },
+            {
+              "text": "角色管理",
+              "id": "Permismanager\/roleUser,Permismanager\/getRolees",
+              "state": {
+                "selected": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "msg": "获取成功!",
+  "code": 200
+}

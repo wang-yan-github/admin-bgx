@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>后台管理中心</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--bootstrap-table 表单-->
+    <link rel="stylesheet" href="css/plugins/bootstrap-table/bootstrap-table.css">
+    <!--fileinput 文件上传-->
+    <link href="css/plugins/bootstrap-fileinput/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <!--sweetalert 确认弹出框-->
+    <link rel="stylesheet" href="css/plugins/sweetalert/sweetalert.css">
+    <!--Toastr 提示信息-->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <!--iCheck 选择框-->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+<div id="wrapper">
+
+    <div id="custom-menu">
+        <custom-menu one="基础信息管理" two="项目类别管理" type="active"></custom-menu>
+    </div>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div id="custom-head">
+            <custom-head></custom-head>
+        </div>
+        <div id="custom-bootstrap">
+            <custom-bootstrap one="首页" two="基础信息管理"></custom-bootstrap>
+        </div>
+
+        <div class="wrapper wrapper-content">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>项目类别管理</h5>
+                        </div>
+
+                        <div class="ibox-content">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">一级类别</label>
+                                        <div class="form-group">
+                                            <select class="form-control" id="code">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">二级类别</label>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 text-right">
+                                    <input type="button" class="btn btn-default" value="查  询" id="searchInfo">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="button" class="btn btn-default" value="重  置" id="reset">
+                                </div>
+                            </div>
+
+                            <div class="hr-line-dashed"></div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="button" id="add" name="add" class="btn btn-primary add" value="新增">
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+
+                                <table class="table" id="table">
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div id="modal-add-form" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">新增</h4>
+            </div>
+            <div class="modal-body">
+
+                <form id="formSave" method="post" onsubmit="return false">
+                    <div class="form-group">
+                        <label class="control-label">一级类别</label>
+                        <select class="form-control" name="d_code">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">二级类别</label>
+                        <input type="type" class="form-control" name="name"
+                               placeholder="请输入角色名称...">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-primary"
+                                name="modal-add-form">提交
+                        </button>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">关闭
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="modal-edit-form" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">修改</h4>
+            </div>
+            <div class="modal-body">
+
+                <form id="formEdit" method="post" onsubmit="return false">
+                    <input type="hidden" name="id">
+                    <div class="form-group">
+                        <label class="control-label">一级类别</label>
+                        <select class="form-control" name="d_code">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">二级类别</label>
+                        <input type="type" class="form-control" name="name"
+                               placeholder="请输入角色名称...">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-primary"
+                                name="modal-edit-form">保存
+                        </button>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">关闭
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!--bootstrap-table 表单-->
+<script src="js/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="js/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<!--fileinput 文件上传-->
+<script src="js/plugins/bootstrap-fileinput/fileinput.js"></script>
+<script src="js/plugins/bootstrap-fileinput/fileinput_locale_zh.js"></script>
+<!--sweetalert 确认弹出框-->
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<!--Toastr 提示信息-->
+<script src="js/plugins/toastr/toastr.min.js/"></script>
+<!--iCheck 选择框-->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<!--vue.js 公共组件-->
+<script src="js/plugins/vuejs/vue.js"></script>
+
+<!--app.js | plug-in-->
+<script src="app.js"></script>
+<script src="plug-in.js"></script>
+
+<script src="bgx/js/base-type.js"></script>
+
+
+</body>
+
+</html>
+
