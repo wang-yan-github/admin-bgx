@@ -80,7 +80,7 @@ $(function () {
                 valign: 'middle',
                 formatter: function (value, row, index) {
                     var res = '<button class="btn btn-outline btn-primary btn-xs" onclick="getDetail(\'' + row.la_id + '\')">详情</button>';
-                    if(res.la_opt_status == 307){
+                    if(row.la_opt_status == 307){
                         res += '&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline btn-success btn-xs" onclick="getAudit(\'' + row.la_id + '\')">审核合同</button>';
                     }
 
