@@ -52,7 +52,7 @@
 
 <script>
     // 回车登陆
-    $(".m-t").bind("keydown",function(e){
+    $(document).bind("keydown",function(e){
         // 兼容FF和IE和Opera
         var theEvent = e || window.event;
         var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
