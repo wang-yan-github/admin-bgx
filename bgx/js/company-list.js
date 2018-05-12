@@ -455,7 +455,7 @@ $(document).on('change', '#formUpload [name=image]', function(){
             contentType: false,
             success:function (data) {
                 $('#formSave [name=c_business_license]').val(data.data.imagename);
-                $('#formSave [name=c_business_license_file]').attr('disabled',true);
+                // $('#formSave [name=c_business_license_file]').attr('disabled',true);
                 $('#formSave [name=c_business_license_url]').attr('src',data.data.thumburl);
             }
         }).done(function (res) {
@@ -473,7 +473,7 @@ $(document).on('change', '#formUpload [name=image]', function(){
             contentType: false,
             success:function (data) {
                 $('#formSave [name=c_safety_frod_permit]').val(data.data.imagename);
-                $('#formSave [name=c_safety_frod_permit_file]').attr('disabled',true);
+                //$('#formSave [name=c_safety_frod_permit_file]').attr('disabled',true);
                 $('#formSave [name=c_safety_frod_permit_url]').attr('src',data.data.thumburl);
             }
         }).done(function (res) {
@@ -491,7 +491,7 @@ $(document).on('change', '#formUpload [name=image]', function(){
             contentType: false,
             success:function (data) {
                 $('#formSave [name=c_account_open_cert]').val(data.data.imagename);
-                $('#formSave [name=c_account_open_cert_file]').attr('disabled',true);
+                //$('#formSave [name=c_account_open_cert_file]').attr('disabled',true);
                 $('#formSave [name=c_account_open_cert_url]').attr('src',data.data.thumburl);
             }
         }).done(function (res) {
@@ -509,7 +509,7 @@ $(document).on('change', '#formUpload [name=image]', function(){
             contentType: false,
             success:function (data) {
                 $('#formEdit [name=c_business_license]').val(data.data.imagename);
-                $('#formEdit [name=c_business_license_file]').attr('disabled',true);
+                //$('#formEdit [name=c_business_license_file]').attr('disabled',true);
                 $('#formEdit [name=c_business_license_url]').attr('src',data.data.thumburl);
             }
         }).done(function (res) {
@@ -527,7 +527,7 @@ $(document).on('change', '#formUpload [name=image]', function(){
             contentType: false,
             success:function (data) {
                 $('#formEdit [name=c_safety_frod_permit]').val(data.data.imagename);
-                $('#formEdit [name=c_safety_frod_permit_file]').attr('disabled',true);
+                //$('#formEdit [name=c_safety_frod_permit_file]').attr('disabled',true);
                 $('#formEdit [name=c_safety_frod_permit_url]').attr('src',data.data.thumburl);
             }
         }).done(function (res) {
@@ -545,7 +545,7 @@ $(document).on('change', '#formUpload [name=image]', function(){
             contentType: false,
             success:function (data) {
                 $('#formEdit [name=c_account_open_cert]').val(data.data.imagename);
-                $('#formEdit [name=c_account_open_cert_file]').attr('disabled',true);
+                //$('#formEdit [name=c_account_open_cert_file]').attr('disabled',true);
                 $('#formEdit [name=c_account_open_cert_url]').attr('src',data.data.thumburl);
             }
         }).done(function (res) {
