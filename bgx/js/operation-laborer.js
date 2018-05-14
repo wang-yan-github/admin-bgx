@@ -59,7 +59,7 @@ $(function () {
                 align: 'center'
             },
             {
-                field: 'wo_status',
+                field: 'status_text',
                 title: '劳务项目状态',
                 align: 'center'
             },
@@ -83,8 +83,10 @@ $(function () {
                 align: 'center',
                 valign: 'middle',
                 formatter: function (value, row, index) {
-                    var res = '<button class="btn btn-outline btn-success btn-xs" onclick="getAudit(\'' + row.wo_id + '\')">审核合同</button>' +
-                        '&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline btn-primary btn-xs" onclick="getDetail(\'' + row.wo_id + '\')">详情</button>';
+                    var res = '<button class="btn btn-outline btn-primary btn-xs" onclick="getDetail(\'' + row.wo_id + '\')">详情</button>';
+                    if(row.wo_status == 307){
+                        var res = '&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline btn-success btn-xs" onclick="getAudit(\'' + row.wo_id + '\')">审核合同</button>';
+                    }
 
                     return res;
                 }
