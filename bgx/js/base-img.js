@@ -252,6 +252,10 @@ function deleteById(id) {
                 data: {"id": id},
                 success: function (data) {
                     if(data.code == 200){
+                        swal("操作成功!", "已成功删除数据！", "success");
+                        //重新加载数据
+                        $(".table").bootstrapTable('refresh', {url: loadAddress});
+                    }else{
                         swal("操作成功!", data.msg, "success");
                         //重新加载数据
                         $(".table").bootstrapTable('refresh', {url: loadAddress});
