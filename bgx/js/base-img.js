@@ -251,9 +251,11 @@ function deleteById(id) {
                 url: deleteAddress,
                 data: {"id": id},
                 success: function (data) {
-                    swal("操作成功!", "已成功删除数据！", "success");
-                    //重新加载数据
-                    $(".table").bootstrapTable('refresh', {url: loadAddress});
+                    if(data.code == 200){
+                        swal("操作成功!", data.msg, "success");
+                        //重新加载数据
+                        $(".table").bootstrapTable('refresh', {url: loadAddress});
+                    }
                 },
                 error: function (data) {
                     swal("操作异常，请刷新页面！", data.msg, "error");
