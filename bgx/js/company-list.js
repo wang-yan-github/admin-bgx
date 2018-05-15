@@ -168,7 +168,7 @@ $(document).on('click', '#modal-add-form [name=modal-add-form]', function(){
                 $('#formSave input[name=c_business_license]').val('');
                 $('#formSave [name=c_account_open_cert_url]').attr('src','');
                 $('#modal-add-form [name=modal-add-form]').attr('disabled',true);
-                swal("默认密码!",'123456', "info");
+                swal("默认密码!",data.data.msg, "info");
                 // 添加成功,重新刷新页面
                 $(".table").bootstrapTable('refresh', {url: loadAddress});
             }else{
