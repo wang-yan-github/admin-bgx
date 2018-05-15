@@ -1,4 +1,4 @@
-var loadAddress = 'https://bgx.lingser.cn/homebasciinfo?token=' + customSession.data.token;
+var loadAddress = costomUrl + 'homebasciinfo?token=' + customSession.data.token;
 
 // 加载
 $(function () {

@@ -1,7 +1,7 @@
-var loadAddress = 'https://bgx.lingser.cn/getporjectlist?token=' + customSession.data.token;
-var modalDetailFormAddress = 'https://bgx.lingser.cn/getcomprojectdetail?token=' + customSession.data.token;
-var modalAuditFormAddress = 'https://bgx.lingser.cn/auditproject?token=' + customSession.data.token;
-var modalManagerFormAddress = 'https://bgx.lingser.cn/managercomproject?token=' + customSession.data.token;
+var loadAddress = costomUrl + 'getporjectlist?token=' + customSession.data.token;
+var modalDetailFormAddress = costomUrl + 'getcomprojectdetail?token=' + customSession.data.token;
+var modalAuditFormAddress = costomUrl + 'auditproject?token=' + customSession.data.token;
+var modalManagerFormAddress = costomUrl + 'managercomproject?token=' + customSession.data.token;
 // 加载
 $(function () {
     $('.table').bootstrapTable({

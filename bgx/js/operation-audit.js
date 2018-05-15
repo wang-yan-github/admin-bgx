@@ -1,4 +1,4 @@
-var loadAddress = 'https://bgx.lingser.cn/auditlist?token=' + customSession.data.token;
+var loadAddress = costomUrl + 'auditlist?token=' + customSession.data.token;
 
 // 加载
 $(function () {

@@ -1,9 +1,9 @@
-var loadAddress = 'https://bgx.lingser.cn/adminrolemenu?token=' + customSession.data.token;
-var modalAddFormAddress = 'https://bgx.lingser.cn/addmenu?token=' + customSession.data.token;
-var modalLevelFormAddress = 'https://bgx.lingser.cn/addmenu?token=' + customSession.data.token;
-var modalEditFormAddress = 'https://bgx.lingser.cn/editmenu?token=' + customSession.data.token;
-var modalLevelEditFormAddress = 'https://bgx.lingser.cn/editmenu?token=' + customSession.data.token;
-var deleteAddress = 'https://bgx.lingser.cn/deletemenu?token=' + customSession.data.token;
+var loadAddress = costomUrl + 'adminrolemenu?token=' + customSession.data.token;
+var modalAddFormAddress = costomUrl + 'addmenu?token=' + customSession.data.token;
+var modalLevelFormAddress = costomUrl + 'addmenu?token=' + customSession.data.token;
+var modalEditFormAddress = costomUrl + 'editmenu?token=' + customSession.data.token;
+var modalLevelEditFormAddress = costomUrl + 'editmenu?token=' + customSession.data.token;
+var deleteAddress = costomUrl + 'deletemenu?token=' + customSession.data.token;
 
 // 加载
 $(function () {

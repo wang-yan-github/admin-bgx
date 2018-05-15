@@ -1,11 +1,11 @@
-var loadAddress = 'https://bgx.lingser.cn/adminuserlist?token=' + customSession.data.token;
-var modalAddFormAddress = 'https://bgx.lingser.cn/adminadduser?token=' + customSession.data.token;
-var modalEditFormAddress = 'https://bgx.lingser.cn/adminedituser?token=' + customSession.data.token;
-var startByIdAddress = 'https://bgx.lingser.cn/adminchangeuser?token=' + customSession.data.token;
-var endByIdAddress = 'https://bgx.lingser.cn/adminchangeuser?token=' + customSession.data.token;
-var resetByIdAddress = 'https://bgx.lingser.cn/adminrestuser?token=' + customSession.data.token;
-var modalGetRoleFormAdddress = 'https://bgx.lingser.cn/getroles?token=' + customSession.data.token;
-var modalAddRoleFormAdddress = 'https://bgx.lingser.cn/roleuser?token=' + customSession.data.token;
+var loadAddress = costomUrl + 'adminuserlist?token=' + customSession.data.token;
+var modalAddFormAddress = costomUrl + 'adminadduser?token=' + customSession.data.token;
+var modalEditFormAddress = costomUrl + 'adminedituser?token=' + customSession.data.token;
+var startByIdAddress = costomUrl + 'adminchangeuser?token=' + customSession.data.token;
+var endByIdAddress = costomUrl + 'adminchangeuser?token=' + customSession.data.token;
+var resetByIdAddress = costomUrl + 'adminrestuser?token=' + customSession.data.token;
+var modalGetRoleFormAdddress = costomUrl + 'getroles?token=' + customSession.data.token;
+var modalAddRoleFormAdddress = costomUrl + 'roleuser?token=' + customSession.data.token;
 
 // 加载
 $(function () {

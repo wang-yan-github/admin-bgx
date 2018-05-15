@@ -1,10 +1,10 @@
-var loadAddress = 'https://bgx.lingser.cn/getcompanyist?token=' + customSession.data.token;
-var modalAddFormAddress = 'https://bgx.lingser.cn/addcompany?token=' + customSession.data.token;
-var modalDetaileFormAddress = 'https://bgx.lingser.cn/getcompanydetaile?token=' + customSession.data.token;
-var modalEditFormAddress = 'https://bgx.lingser.cn/editcompany?token=' + customSession.data.token;
-var deleteAddress = 'https://bgx.lingser.cn/deleteompany?token=' + customSession.data.token;
-var uploadAddress = 'https://bgx.lingser.cn/bgxuploadimage';
-var modalAuditFormAddress = 'https://bgx.lingser.cn/auditcompany?token=' + customSession.data.token;
+var loadAddress = costomUrl + 'getcompanyist?token=' + customSession.data.token;
+var modalAddFormAddress = costomUrl + 'addcompany?token=' + customSession.data.token;
+var modalDetaileFormAddress = costomUrl + 'getcompanydetaile?token=' + customSession.data.token;
+var modalEditFormAddress = costomUrl + 'editcompany?token=' + customSession.data.token;
+var deleteAddress = costomUrl + 'deleteompany?token=' + customSession.data.token;
+var uploadAddress = costomUrl + 'bgxuploadimage';
+var modalAuditFormAddress = costomUrl + 'auditcompany?token=' + customSession.data.token;
 
 // 加载
 $(function () {
