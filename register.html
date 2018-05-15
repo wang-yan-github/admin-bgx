@@ -63,7 +63,7 @@
                 //几个参数需要注意一下
                 type: "POST",// 方法类型
                 dataType: "json",// 服务器返回的数据类型
-                url: 'https://api.baogongxia.com/modifypassword?token=' + customSession.data.token,// url
+                url: 'http://bgx.lingser.cn/modifypassword?token=' + customSession.data.token,// url
                 data: $('#formSave').serialize(),
                 success: function (data) {
                     if(data.code == 200){
