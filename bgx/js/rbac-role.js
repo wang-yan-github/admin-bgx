@@ -209,6 +209,7 @@ function deleteById(id) {
 
 // 获取关系维护数据
 function getTree(id){
+    $("#formTree").jstree('destroy');
     $('#modal-tree-form [name=modal-tree-form]').attr('disabled',false);
     $('#modal-tree-form input[name="r_id"]').val(id);
     $("#formTree").jstree({
