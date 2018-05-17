@@ -1,4 +1,4 @@
-var loadAddress = costomUrl + 'auditlist?token=' + customSession.data.token;
+var loadAddress = costomUrl + 'pushlist?token=' + customSession.data.token;
 
 // 加载
 $(function () {
@@ -20,7 +20,6 @@ $(function () {
             var temp = {
                 pagecount: params.limit, //每页多少条数据
                 page:(params.offset / params.limit) + 1,//页码
-                name:$('#name').val(),
                 type:$('#type').val()
             };
             return temp;
@@ -52,41 +51,51 @@ $(function () {
         },
         columns: [
             {
-                field: 'type_text',
-                title: '审核类型',
+                field: 'b_identity',
+                title: '推送预约者的身份',
                 align: 'center'
             },
             {
-                field: 'start_time',
-                title: '提交审核时间',
+                field: 'b_id',
+                title: '推送预约者的名字',
                 align: 'center'
             },
             {
-                field: 'reviewer_time',
-                title: '审核时间',
+                field: 'bs_identity',
+                title: '被推送预约者的身份',
                 align: 'center'
             },
             {
-                field: 'reviewer',
-                title: '审核人员',
+                field: 'bs_id',
+                title: '被推送预约者的名字',
                 align: 'center'
             },
             {
-                field: 're_content',
-                title: '审核内容',
+                field: 'b_name',
+                title: '项目名字',
                 align: 'center'
             },
             {
-                field: 'status',
-                title: '审核意见',
+                field: 'b_type',
+                title: '类型',
                 align: 'center',
                 formatter:function (value) {
                     if (value == 1){
-                        return '通过';
+                        return '系统推送';
                     } else {
-                        return '不通过';
+                        return '主动预约';
                     }
                 }
+            },
+            {
+                field: 'b_status',
+                title: '状态信息',
+                align: 'center'
+            },
+            {
+                field: 'use_time',
+                title: '最近一次操作时间',
+                align: 'center'
             }
         ],
         onLoadSuccess: function (res) {  //加载成功时执行
@@ -129,7 +138,6 @@ $(document).on('click', '#searchInfo', function(){
 });
 // 重置
 $(document).on('click', '#reset', function(){
-    $('#name').val('');
     $('#type').val('');
     $('.table').bootstrapTable('refresh');
 });

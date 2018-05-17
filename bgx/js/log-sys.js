@@ -20,8 +20,7 @@ $(function () {
             var temp = {
                 pagecount: params.limit, //每页多少条数据
                 page:(params.offset / params.limit) + 1,//页码
-                name:$('#name').val(),
-                type:$('#type').val()
+                name:$('#name').val()
             };
             return temp;
         },
@@ -52,16 +51,6 @@ $(function () {
         },
         columns: [
             {
-                field: 'log_name',
-                title: '操作方法名称',
-                align: 'center'
-            },
-            {
-                field: 'log_fun',
-                title: '操作方法',
-                align: 'center'
-            },
-            {
                 field: 'log_usr',
                 title: '操作者姓名',
                 align: 'center'
@@ -69,6 +58,16 @@ $(function () {
             {
                 field: 'log_time',
                 title: '操作时间',
+                align: 'center'
+            },
+            {
+                field: 'log_name',
+                title: '操作方法名称',
+                align: 'center'
+            },
+            {
+                field: 'log_fun',
+                title: '操作方法',
                 align: 'center'
             },
             {
@@ -99,29 +98,6 @@ $(function () {
         locale: 'zh-CN',//中文支持,
     })
 })
-$(function () {
-    $.ajax({
-        type:'post',
-        url:loadAddress,
-        dataType:'json',
-        data:{'':''},
-        success:function (data) {
-            if(data.code == 200){
-                // 赋值
-                $('#type').html('');
-                $('#type').append('<option value=""></option>>');
-                for(var i = 0; i < data.data.types.length; i ++){
-                    $('#type').append('<option value="'+ data.data.types[i][0] +'">'+ data.data.types[i][1] +'</option>>');
-                }
-            }else{
-                toastr.warning(data.msg);
-            }
-        },
-        error:function (data) {
-            swal('操作异常，请尝试刷新页面！',data.msg,'error');
-        }
-    })
-})
 
 // 查询
 $(document).on('click', '#searchInfo', function(){
@@ -130,6 +106,5 @@ $(document).on('click', '#searchInfo', function(){
 // 重置
 $(document).on('click', '#reset', function(){
     $('#name').val('');
-    $('#type').val('');
     $('.table').bootstrapTable('refresh');
 });
