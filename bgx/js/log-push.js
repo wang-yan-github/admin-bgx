@@ -51,18 +51,8 @@ $(function () {
         },
         columns: [
             {
-                field: 'b_identity',
-                title: '推送者身份',
-                align: 'center'
-            },
-            {
                 field: 'b_id',
                 title: '推送者名字',
-                align: 'center'
-            },
-            {
-                field: 'bs_identity',
-                title: '被推送者身份',
                 align: 'center'
             },
             {
