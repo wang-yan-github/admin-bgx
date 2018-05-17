@@ -1,7 +1,7 @@
 // 全局用户信息
 var customSession = JSON.parse(sessionStorage.getItem('customSession'));
 // 全局URL
-var costomUrl = 'http://bgx.lingser.cn/';
+var costomUrl = 'https://api.baogongxia.com/';
 
 // 注册全局组件 - 自定义菜单
 Vue.component("custom-menu", {
