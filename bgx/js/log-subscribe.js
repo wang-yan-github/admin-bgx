@@ -20,7 +20,7 @@ $(function () {
             var temp = {
                 pagecount: params.limit, //每页多少条数据
                 page:(params.offset / params.limit) + 1,//页码
-                type:$('#type').val(2)
+                type:2
             };
             return temp;
         },
@@ -52,22 +52,22 @@ $(function () {
         columns: [
             {
                 field: 'b_identity',
-                title: '预约者的身份',
+                title: '预约者身份',
                 align: 'center'
             },
             {
                 field: 'b_id',
-                title: '预约者的名字',
+                title: '预约者名字',
                 align: 'center'
             },
             {
                 field: 'bs_identity',
-                title: '被预约者的身份',
+                title: '被预约者身份',
                 align: 'center'
             },
             {
                 field: 'bs_id',
-                title: '被预约者的名字',
+                title: '被预约者名字',
                 align: 'center'
             },
             {
@@ -115,6 +115,5 @@ $(document).on('click', '#searchInfo', function(){
 });
 // 重置
 $(document).on('click', '#reset', function(){
-    $('#type').val('2');
     $('.table').bootstrapTable('refresh');
 });

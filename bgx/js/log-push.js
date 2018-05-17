@@ -20,7 +20,7 @@ $(function () {
             var temp = {
                 pagecount: params.limit, //每页多少条数据
                 page:(params.offset / params.limit) + 1,//页码
-                type:$('#type').val()
+                type:1
             };
             return temp;
         },
@@ -52,22 +52,22 @@ $(function () {
         columns: [
             {
                 field: 'b_identity',
-                title: '推送预约者的身份',
+                title: '推送者身份',
                 align: 'center'
             },
             {
                 field: 'b_id',
-                title: '推送预约者的名字',
+                title: '推送者名字',
                 align: 'center'
             },
             {
                 field: 'bs_identity',
-                title: '被推送预约者的身份',
+                title: '被推送者身份',
                 align: 'center'
             },
             {
                 field: 'bs_id',
-                title: '被推送预约者的名字',
+                title: '被推送者名字',
                 align: 'center'
             },
             {
@@ -106,29 +106,6 @@ $(function () {
             console.info("加载数据失败");
         },
         locale: 'zh-CN',//中文支持,
-    })
-})
-$(function () {
-    $.ajax({
-        type:'post',
-        url:loadAddress,
-        dataType:'json',
-        data:{'':''},
-        success:function (data) {
-            if(data.code == 200){
-                // 赋值
-                $('#type').html('');
-                $('#type').append('<option value=""></option>>');
-                for(var i = 0; i < data.data.types.length; i ++){
-                    $('#type').append('<option value="'+ data.data.types[i][0] +'">'+ data.data.types[i][1] +'</option>>');
-                }
-            }else{
-                toastr.warning(data.msg);
-            }
-        },
-        error:function (data) {
-            swal('操作异常，请尝试刷新页面！',data.msg,'error');
-        }
     })
 })
 
