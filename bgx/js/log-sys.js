@@ -1,4 +1,4 @@
-var loadAddress = costomUrl + 'auditlist?token=' + customSession.data.token;
+var loadAddress = costomUrl + 'operlogslist?token=' + customSession.data.token;
 
 // 加载
 $(function () {
@@ -52,33 +52,28 @@ $(function () {
         },
         columns: [
             {
-                field: 'type_text',
-                title: '审核类型',
+                field: 'log_name',
+                title: '操作方法名称',
                 align: 'center'
             },
             {
-                field: 'start_time',
-                title: '提交审核时间',
+                field: 'log_fun',
+                title: '操作方法',
                 align: 'center'
             },
             {
-                field: 'reviewer_time',
-                title: '审核时间',
+                field: 'log_usr',
+                title: '操作者姓名',
                 align: 'center'
             },
             {
-                field: 'reviewer',
-                title: '审核人员',
+                field: 'log_time',
+                title: '操作时间',
                 align: 'center'
             },
             {
-                field: 're_content',
-                title: '审核内容',
-                align: 'center'
-            },
-            {
-                field: 'status',
-                title: '审核意见',
+                field: 'log_res',
+                title: '操作状态',
                 align: 'center',
                 formatter:function (value) {
                     if (value == 1){
@@ -87,6 +82,11 @@ $(function () {
                         return '不通过';
                     }
                 }
+            },
+            {
+                field: 'log_ip',
+                title: '操作者ip',
+                align: 'center'
             }
         ],
         onLoadSuccess: function (res) {  //加载成功时执行
