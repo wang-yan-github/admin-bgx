@@ -20,7 +20,8 @@ $(function () {
             var temp = {
                 pagecount: params.limit, //每页多少条数据
                 page:(params.offset / params.limit) + 1,//页码
-                type:2
+                type:2,
+                name:$('#name').val()
             };
             return temp;
         },
@@ -105,5 +106,6 @@ $(document).on('click', '#searchInfo', function(){
 });
 // 重置
 $(document).on('click', '#reset', function(){
+    $('#name').val('');
     $('.table').bootstrapTable('refresh');
 });
