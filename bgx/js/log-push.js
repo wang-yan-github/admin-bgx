@@ -1,4 +1,4 @@
-var loadAddress = costomUrl + 'makelist?token=' + customSession.data.token;
+var loadAddress = costomUrl + 'pushlist?token=' + customSession.data.token;
 
 // 加载
 $(function () {
