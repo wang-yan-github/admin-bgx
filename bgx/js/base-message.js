@@ -172,10 +172,10 @@ $(document).on('click', '#modal-add-form [name=modal-add-form]', function(){
 function getEdit(id,d_code,title,content) {
     $('#formEdit input[name="id"]').val('');
     $('#formEdit input[name="id"]').val(id);
-    $('#formEdit [name="d_code"]').find("option").each(function (i) {
+    $('#formEdit [name="msg_code"]').find("option").each(function (i) {
         $(this).removeAttr("selected");
     });
-    $('#formEdit [name="d_code"]').find('option[value="' + d_code + '"]').attr("selected",true);;
+    $('#formEdit [name="msg_code"]').find('option[value="' + d_code + '"]').attr("selected",true);;
     $('#formEdit input[name="title"]').val('');
     $('#formEdit input[name="title"]').val(title);
     $('#formEdit [name="content"]').val('');
