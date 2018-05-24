@@ -79,7 +79,7 @@ $(function () {
                 align: 'center',
                 valign: 'middle',
                 formatter: function (value, row, index) {
-                    var res = '<button class="btn btn-outline btn-info btn-xs" onclick="getEdit(\'' + row.id + '\',\'' + row.d_code + '\',\'' + row.title + '\',\'' + row.content +'\')">修改</button>' +
+                    var res = '<button class="btn btn-outline btn-info btn-xs" onclick="getEdit(\'' + row.id + '\',\'' + row.msg_name + '\',\'' + row.title + '\',\'' + row.content +'\')">修改</button>' +
                         '&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline btn-danger btn-xs" onclick="deleteById(\'' + row.id + '\')">删除</button>';
 
                     return res;
